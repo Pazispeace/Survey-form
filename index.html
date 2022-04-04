@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>FreeCodeCamp Survey Form</title>
+
+  <meta name="description" content="Welcome to the FreeCodeCamp Survey Form">
+  <link rel="canonical" href="https://Pazispeace.github.io/Survey-form">
+  <link rel="favicon" href="https://Pazispeace.github.io/Survey-form/assets/favicon.png">
+  <link rel="apple-touch-icon" href="https://Pazispeace.github.io/Survey-form/assets/favicon.png">
+  <meta name="theme-color" content="#7533de">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:type" content="website">
+  <meta property="og:title" name="twitter:title" content="Welcome to the FreeCodeCamp Survey Form">
+  <meta property="og:description" name="twitter:description" content="Welcome to the FreeCodeCamp Survey Form">
+  <meta property="og:image" name="twitter:image" content="https://Pazispeace.github.io/Survey-form/assets/survey.png">
+  <meta property="og:url" name="twitter:url" content="https://Pazispeace.github.io/Survey-form">
+
+
+</head>
+
+<body>
+  <section class="survey-form">
+    <div class="form-container">
+      <div class=" form-welcome">
+
+        <img class="none display" src="assets/personal-information.svg" alt="illustration of woman filling a form">
+        <h1 id="title" class="text-center">FreeCodeCamp Survey Form</h1>
+        <p id="description" class="text-center">Thank you for taking the time to help us improve the platform</p>
+      </div>
+      <form id="survey-form" class="form" action="https://formsubmit.co/luisferthonik014@gmail.com" method="POST">
+        <div class="group personal-info">
+
+          <label id="name-label" for="name">Name</label>
+          <input id="name" type="text" name="name" placeholder="Enter your name" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$"
+            title="name accepts only letters and blanks" required>
+
+          <label id="email-label" for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="Enter your email"
+            pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" title="Invalid email format" required>
+
+          <label id="number-label" for="number">Age <small>(optional)</small></label>
+          <input id="number" type="number" name="number" placeholder="Enter your age" min="1" step="1" max="99">
+
+
+        </div>
+        <div class="group dropdown">
+          <p>Which option describes your current role?
+          </p>
+          <select id="dropdown" name="role" required>
+            <option value="" selected>Select current role</option>
+            <option value="Student">Student</option>
+            <option value="FullJob">Full time Job</option>
+            <option value="fullLearner">Full time learner</option>
+            <option value="PreferNot">Prefer not to say</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <p>What is your favorite feature of freeCodeCamp?
+          </p>
+          <select id="dropdown" name="feature" required>
+            <option value="" selected>Select an option</option>
+            <option value="challenges">Challenges</option>
+            <option value="project">Projects</option>
+            <option value="community">Community</option>
+            <option value="OpenSource">Open Source</option>
+            <option value="Other">Other</option>
+          </select>
+
+        </div>
+
+        <div class="group check-part">
+          <p>What would you like to see improved? <small>(Check all that apply)</small>
+          </p>
+          <label>
+            <input type="checkbox" name="improve" value="front">
+            Front-end Projects
+          </label>
+          <label>
+            <input type="checkbox" name="improve" value="back">
+            Back-end Projects
+          </label>
+          <label>
+            <input type="checkbox" name="improve" value="data">
+            Data Visualization
+          </label>
+          <label>
+            <input type="checkbox" name="improve" value="challenges">
+            Challenges
+          </label>
+          <label>
+            <input type="checkbox" name="improve" value="community">
+            Open Source Community
+          </label>
+          <label>
+            <input type="checkbox" name="improve" value="gitter">
+            Gitter help rooms
+          </label>
+          <label>
+            <input type="checkbox" name="improve" value="videos">
+            Videos
+          </label>
+          <label>
+            <input type="checkbox" name="improve" value="meetups">
+            City Meetups
+          </label>
+          <label>
+            <input type="checkbox" name="improve" value="wiki">
+            Wiki
+          </label>
+          <label>
+            <input type="checkbox" name="improve" value="forum">
+            Forum
+          </label>
+          <label>
+            <input type="checkbox" name="improve" value="courses">
+            Additional Courses
+          </label>
+
+        </div>
+        <div class="group radio-part">
+          <p>Would you recommend freeCodeCamp to a friend?
+          </p>
+
+          <label><input type="radio" name="recommend" id="definitely" value="definitely" checked>definitely</label>
+
+          <label> <input type="radio" name="recommend" id="maybe" value="maybe">Maybe</label>
+
+          <label><input type="radio" name="recommend" id="not-sure" value="not-sure">Not sure</label>
+        </div>
+
+        <div class="group comments">
+          <label for="comments">Tell us what you think!
+          </label>
+          <textarea id="comments" name="comments" placeholder="Enter your comments" cols="30" rows="10"
+            required></textarea>
+        </div>
+
+        <input id="submit" type="submit">
+
+      </form>
+
+    </div>
+  </section>
+</body>
+
+</html>
